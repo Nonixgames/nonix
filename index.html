@@ -85,13 +85,20 @@
       </div>
       <script>
           const gallery = document.getElementById("gallery");
-          const images = ["render1.jpg", "render2.jpg", "video1.mp4", "video2.mp4"];
-          images.forEach(src => {
-              const element = document.createElement(src.endsWith(".mp4") ? "video" : "img");
-              element.src = src;
-              element.style.width = "100%";
-              if (src.endsWith(".mp4")) element.controls = true;
-              gallery.appendChild(element);
+          const mediaLinks = [
+              "https://example.com/render1.jpg",
+              "https://example.com/render2.jpg",
+              "https://example.com/video1.mp4",
+              "https://example.com/video2.mp4"
+          ];
+          mediaLinks.forEach(link => {
+              if (link) {
+                  const element = document.createElement(link.endsWith(".mp4") ? "video" : "img");
+                  element.src = link;
+                  element.style.width = "100%";
+                  if (link.endsWith(".mp4")) element.controls = true;
+                  gallery.appendChild(element);
+              }
           });
       </script>
   </body>
