@@ -59,8 +59,20 @@
           }
           #gallery {
               display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
               gap: 10px;
+          }
+          .gallery-item {
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+              border-radius: 5px;
+          }
+          .gallery-item.landscape {
+              aspect-ratio: 16 / 9;
+          }
+          .gallery-item.portrait {
+              aspect-ratio: 9 / 16;
           }
       </style>
   </head>
@@ -87,17 +99,14 @@
       <script>
           const gallery = document.getElementById("gallery");
           const mediaLinks = [
-              "https://pbs.twimg.com/media/Ghi7MDJXMAAcz7v?format=jpg&name=4096x4096",
-              "https://pbs.twimg.com/media/Ghi7MHkXcAAH9To?format=jpg&name=4096x4096",
-              "https://example.com/video1.mp4",
-              "https://example.com/video2.mp4"
+              { url: "https://pbs.twimg.com/media/Ghi7MDJXMAAcz7v?format=jpg&name=4096x4096", type: "landscape" },
+              { url: "https://pbs.twimg.com/media/Ghi7MHkXcAAH9To?format=jpg&name=4096x4096", type: "portrait" }
           ];
-          mediaLinks.forEach(link => {
-              if (link) {
-                  const element = document.createElement(link.endsWith(".mp4") ? "video" : "img");
-                  element.src = link;
-                  element.style.width = "100%";
-                  if (link.endsWith(".mp4")) element.controls = true;
+          mediaLinks.forEach(media => {
+              if (media.url) {
+                  const element = document.createElement("img");
+                  element.src = media.url;
+                  element.classList.add("gallery-item", media.type);
                   gallery.appendChild(element);
               }
           });
