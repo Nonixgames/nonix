@@ -1,1 +1,98 @@
-<h1>a<\h1>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Nonix - Showcase</title>
+      <link rel="stylesheet" href="design.css">
+      <style>
+          body {
+              background-color: #1a1a2e;
+              color: #e0e0e0;
+              font-family: 'Arial', sans-serif;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              margin: 0;
+          }
+          .container {
+              display: flex;
+              width: 80%;
+              max-width: 1200px;
+          }
+          .sidebar {
+              width: 30%;
+              padding: 20px;
+              background-color: #322653;
+              border-radius: 10px;
+          }
+          .sidebar h1 {
+              color: #c084fc;
+          }
+          .social-links a {
+              display: block;
+              margin: 10px 0;
+              padding: 10px;
+              text-align: center;
+              color: white;
+              border-radius: 5px;
+              transition: transform 0.3s;
+          }
+          .social-links a:hover {
+              transform: scale(1.1);
+          }
+          .twitter { background-color: #1DA1F2; }
+          .instagram { background-color: #E1306C; }
+          .discord { background-color: #5865F2; }
+          .email { background-color: #D44638; }
+          .bluesky { background-color: #0085FF; }
+          .kick { background-color: #52C41A; }
+          .twitch { background-color: #9146FF; }
+          .content {
+              flex: 1;
+              padding: 20px;
+              background-color: #251d3a;
+              border-radius: 10px;
+              margin-left: 20px;
+          }
+          #gallery {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+              gap: 10px;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <aside class="sidebar">
+              <h1>Nonix</h1>
+              <p>I'm Nonix, content creator on YouTube. I also make FNaF renders and think I'm addicted to it. Pretty obvious that I'm a FNaF fan.</p>
+              <div class="social-links">
+                  <a href="#" class="twitter">Twitter</a>
+                  <a href="#" class="instagram">Instagram</a>
+                  <a href="#" class="discord">Discord</a>
+                  <a href="#" class="email">Email</a>
+                  <a href="#" class="bluesky">Bluesky</a>
+                  <a href="#" class="kick">Kick</a>
+                  <a href="#" class="twitch">Twitch</a>
+              </div>
+          </aside>
+          <main class="content">
+              <h2>My Work</h2>
+              <div id="gallery"></div>
+          </main>
+      </div>
+      <script>
+          const gallery = document.getElementById("gallery");
+          const images = ["render1.jpg", "render2.jpg", "video1.mp4", "video2.mp4"];
+          images.forEach(src => {
+              const element = document.createElement(src.endsWith(".mp4") ? "video" : "img");
+              element.src = src;
+              element.style.width = "100%";
+              if (src.endsWith(".mp4")) element.controls = true;
+              gallery.appendChild(element);
+          });
+      </script>
+  </body>
+  </html>
