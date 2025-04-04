@@ -1,8 +1,115 @@
+<!DOCTYPE html><html lang="en">
 <head>
-<title>LTM SUPREME GOAT</title>
-  <meta name="description" content="LTM, THE MOST GOATED GOATY OF EXISTENCE, LOVER OF SHADOW, SIMP.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTM - The SUPREME GOAT</title>
+    <meta name="description" content="LTM, THE MOST GOATED GOATY OF EXISTENCE, LOVER OF SHADOW, SIMP.">
   <meta property="og:image" content="https://cdn.discordapp.com/attachments/561950204140716033/1357719485569699901/LTM.png?ex=67f13a4e&is=67efe8ce&hm=da4c4e926c1fa3e3efab94860e48877fed86eb79696e5e5c5de0bbca34a7a374&">
-  <h1>LTM IS THE SUPREME GOAT, PRAISE THE GOAT OR DIE</h1>
-  
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2c2c54, #1b1b3a);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .images-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .images-container img {
+            width: 90%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 10px auto;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container a, .reward-button {
+            background-color: #ff4757;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .reward-button {
+            border: none;
+            cursor: pointer;
+        }
+        #count {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .images-container {
+                flex-direction: column;
+            }
+            .content {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-
+<body>
+    <div class="container">
+        <div class="images-container">
+            <img src="https://cdn.discordapp.com/attachments/1243444033292996619/1357748342108590293/Screenshot_2025-01-06_130804.png" alt="Image 1">
+            <img src="https://cdn.discordapp.com/attachments/1243444033292996619/1357748342494593165/Screenshot_2025-01-06_130736.png" alt="Image 2">
+            <img src="https://cdn.discordapp.com/attachments/1243444033292996619/1357748342955839731/Screenshot_2025-01-06_130620.png" alt="Image 3">
+        </div>
+        <div class="content">
+            <h1>LTM. THE GOAT. SUPREME GOAT</h1>
+            <p>LTM is the most goated person that has ever existed and its work is worth millions. LTM deserves a reward for all its goated.</p>
+            <h2>Goat Twitter Account</h2>
+            <div class="button-container">
+                <a href="https://x.com/LTM_BUSINESS_" target="_blank">Visit Twitter</a>
+            </div>
+            <div class="button-container">
+                <button class="reward-button" onclick="rewardGoat()">Reward the GOAT</button>
+                <div id="count">Times called LTM the GOAT: 0</div>
+            </div>
+        </div>
+        <div class="images-container">
+            <img src="https://cdn.discordapp.com/attachments/1243444033292996619/1357748600502878399/Screenshot_2024-09-26_215300.png" alt="Image 4">
+            <img src="https://cdn.discordapp.com/attachments/561950204140716033/1357749610671767703/20250404_131153.jpg" alt="Image 5">
+            <img src="https://cdn.discordapp.com/attachments/561950204140716033/1357749746709827798/20250404_131240.jpg" alt="Image 6">
+        </div>
+    </div>
+    <script>
+        let count = 0;
+        function rewardGoat() {
+            count++;
+            document.getElementById("count").innerText = "Times called LTM the GOAT: " + count;
+        }
+    </script>
+</body>
+</html>
