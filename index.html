@@ -1,135 +1,158 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Nonix</title>
-      <link rel="icon" type="image/x-icon" href="https://cdn.bsky.app/img/avatar/plain/did:plc:s57xduw7ql3gyxuazjaqhp2f/bafkreiefdpm3soazubwfidsy4oa4dqlrmqaatv2kxylybsobnbc3yaasxy@jpeg">
-      <meta name="description" content="About Nonixgames (Nonix).">
-      <meta name="keywords" content="nonixgames, nonix, Nonix, Nonixgames, NonixGD, Nonixgames , Nonix FNAF, Nonixgames YouTube">
-      <meta property="og:image" content="https://yt3.googleusercontent.com/JdOxCyVJTH5Mtm6HeCTq8UquftEjbLCTanlm_UG0JLynafo08mKDyrxUp1TnCUxiA2puG5aV=s160-c-k-c0x00ffffff-no-rj">
-      <link rel="stylesheet" href="design.css">
-      <style>
-          body {
-              background-color: #1a1a2e;
-              color: #e0e0e0;
-              font-family: 'Arial', sans-serif;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              min-height: 100vh;
-              margin: 0;
-              flex-direction: column;
-          }
-          .container {
-              display: flex;
-              flex-direction: column;
-              width: 90%;
-              max-width: 1200px;
-          }
-          .sidebar {
-              width: 90%;
-              padding: 20px;
-              background-color: #322653;
-              border-radius: 10px;
-              text-align: center;
-          }
-          .sidebar h1 {
-              color: #c084fc;
-              font-size: 3.5em;
-              text-align: center;
-          }
-          .social-links {
-              display: flex;
-              justify-content: center;
-              flex-wrap: wrap;
-              gap: 10px;
-          }
-          .social-links a img {
-              width: 40px;
-              height: 40px;
-              border-radius: 5px;
-              transition: transform 0.3s;
-          }
-          .social-links a:hover img {
-              transform: scale(1.1);
-          }
-          .content {
-              flex: 1;
-              padding: 20px;
-              background-color: #251d3a;
-              border-radius: 10px;
-              margin-top: 20px;
-          }
-          #gallery {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-              gap: 10px;
-          }
-          .gallery-item {
-              width: 100%;
-              height: auto;
-              object-fit: cover;
-              border-radius: 5px;
-          }
-          .gallery-item.landscape {
-              aspect-ratio: 16 / 9;
-          }
-          .gallery-item.portrait {
-              aspect-ratio: 9 / 16;
-          }
-          @media (min-width: 768px) {
-              .container {
-                  flex-direction: row;
-              }
-              .sidebar {
-                  width: 30%;
-                  text-align: left;
-              }
-              .content {
-                  margin-left: 20px;
-              }
-          }
-      </style>
-  </head>
-  <body>
-      <div class="container">
-          <aside class="sidebar">
-              <h1>Nonix</h1>
-              <p>I'm Nonixgames, mostly known as Nonix. I'm a Chilean content creator on YouTube creating FNaF and GD content. I make FNaF renders as a hobby in my free time and I think I'm addicted to it. Pretty obvious that I'm a FNaF fan. I speak Spanish and English. <br>My email: contact@nonixgames.com</p>
-              <div class="social-links">
-                  <a href="https://www.x.com/Nonixgames"><img src="twt.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com/Nonixgames"><img src="insta.png" alt="Instagram"></a>
-                  <a href="https://discord.gg/nGxhPvAbuA"><img src="dsc.png" alt="Discord"></a>
-                  <a href="https://www.youtube.com/nonixgames"><img src="yt.png" alt="YouTube"></a>
-                  <a href="https://bsky.app/profile/nonixgames.com"><img src="bsky.png" alt="Bluesky"></a>
-                  <a href="https://www.kick.com/nonixgames"><img src="kick.png" alt="Kick"></a>
-                  <a href="https://www.twitch.com/nonixgames"><img src="twch.png" alt="Twitch"></a>
-              </div>
-          </aside>
-          <main class="content">
-              <h2>My Work</h2>
-              <div id="gallery"></div>
-          </main>
-      </div>
-      <script>
-          const gallery = document.getElementById("gallery");
-          const mediaLinks = [
-              { url: "https://pbs.twimg.com/media/Ghi7MDJXMAAcz7v?format=jpg&name=4096x4096", type: "landscape" },
-              { url: "https://pbs.twimg.com/media/GhxafbkWkAAbSX1?format=jpg&name=4096x4096", type: "landscape" },
-              { url: "https://pbs.twimg.com/media/GVfm9LAW0AEaDFc?format=jpg&name=medium", type: "landscape" },
-              { url: "https://pbs.twimg.com/media/Ghi7MHkXcAAH9To?format=jpg&name=4096x4096", type: "portrait" },
-              { url: "https://pbs.twimg.com/media/GgEaNNDWAAAzDjn?format=jpg&name=4096x4096", type: "portrait" },
-              { url: "https://pbs.twimg.com/media/GgLSGEUXEAAx6gD?format=jpg&name=4096x4096", type: "portrait" }
-          ];
-          mediaLinks.forEach(media => {
-              if (media.url) {
-                  const element = document.createElement("img");
-                  element.src = media.url;
-                  element.classList.add("gallery-item", media.type);
-                  gallery.appendChild(element);
-              }
-          });
-      </script>
-  </body>
-  </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonix</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.bsky.app/img/avatar/plain/did:plc:s57xduw7ql3gyxuazjaqhp2f/bafkreiefdpm3soazubwfidsy4oa4dqlrmqaatv2kxylybsobnbc3yaasxy@jpeg">
+    <meta name="description" content="About Nonixgames (Nonix).">
+    <meta name="keywords" content="nonixgames, nonix, Nonix, Nonixgames, NonixGD, Nonixgames , Nonix FNAF, Nonixgames YouTube">
+    <meta property="og:image" content="https://yt3.googleusercontent.com/JdOxCyVJTH5Mtm6HeCTq8UquftEjbLCTanlm_UG0JLynafo08mKDyrxUp1TnCUxiA2puG5aV=s160-c-k-c0x00ffffff-no-rj">
+    <link rel="stylesheet" href="design.css">
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+        .navbar {
+            background-color: #251d3a;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .navbar a {
+            color: #c084fc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .navbar a:hover {
+            transform: scale(1.1);
+            color: #ffffff;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .sidebar {
+            background-color: #322653;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .sidebar h1 {
+            color: #c084fc;
+            font-size: 3em;
+            margin: 0;
+        }
+        .sidebar p {
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .social-links a img {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .social-links a:hover img {
+            transform: scale(1.1);
+        }
+        .content {
+            margin-top: 20px;
+            background-color: #251d3a;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .gallery-item {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .gallery-item.landscape {
+            aspect-ratio: 16 / 9;
+        }
+        .gallery-item.portrait {
+            aspect-ratio: 9 / 16;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                max-width: 1200px;
+                margin: auto;
+            }
+            .sidebar {
+                width: 30%;
+                text-align: left;
+            }
+            .content {
+                width: 70%;
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="https://nonixgames.com/team">Team</a>
+        <a href="https://nonixgames.com/commissions">Commissions</a>
+        <a href="https://nonixgames.com/news">News</a>
+    </nav>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>Nonix</h1>
+            <p>I'm Nonixgames, mostly known as Nonix. I'm a Chilean content creator on YouTube creating FNaF and GD content. I make FNaF renders as a hobby in my free time and I think I'm addicted to it. Pretty obvious that I'm a FNaF fan. I speak Spanish and English. <br>My email: nonix@nonixgames.com</p>
+            <div class="social-links">
+                <a href="#"><img src="https://github.com/Nonixgames/nonix/blob/main/twt.png" alt="Twitter"></a>
+                <a href="#"><img src="https://github.com/Nonixgames/nonix/blob/main/insta.png" alt="Instagram"></a>
+                <a href="#"><img src="https://github.com/Nonixgames/nonix/blob/main/dsc.png" alt="Discord"></a>
+                <a href="#"><img src="https://github.com/Nonixgames/nonix/blob/main/yt.png" alt="YouTube"></a>
+                <a href="#"><img src="https://github.com/Nonixgames/nonix/blob/main/bsky.png" alt="Bluesky"></a>
+                <a href="#"><img src="https://github.com/Nonixgames/nonix/blob/main/kick.png" alt="Kick"></a>
+                <a href="#"><img src="https://github.com/Nonixgames/nonix/blob/main/twch.png" alt="Twitch"></a>
+            </div>
+        </aside>
+        <main class="content">
+            <h2>My Work</h2>
+            <div id="gallery"></div>
+        </main>
+    </div>
+    <script>
+        const gallery = document.getElementById("gallery");
+        const mediaLinks = [
+            { url: "https://pbs.twimg.com/media/Ghi7MDJXMAAcz7v?format=jpg&name=4096x4096", type: "landscape" },
+            { url: "https://pbs.twimg.com/media/GhxafbkWkAAbSX1?format=jpg&name=4096x4096", type: "landscape" },
+            { url: "https://pbs.twimg.com/media/GVfm9LAW0AEaDFc?format=jpg&name=medium", type: "landscape" },
+            { url: "https://pbs.twimg.com/media/Ghi7MHkXcAAH9To?format=jpg&name=4096x4096", type: "portrait" },
+            { url: "https://pbs.twimg.com/media/GgEaNNDWAAAzDjn?format=jpg&name=4096x4096", type: "portrait" },
+            { url: "https://pbs.twimg.com/media/GgLSGEUXEAAx6gD?format=jpg&name=4096x4096", type: "portrait" }
+        ];
+        mediaLinks.forEach(media => {
+            if (media.url) {
+                const element = document.createElement("img");
+                element.src = media.url;
+                element.classList.add("gallery-item", media.type);
+                gallery.appendChild(element);
+            }
+        });
+    </script>
+</body>
+</html>
