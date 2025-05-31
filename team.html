@@ -15,6 +15,17 @@
             margin: 0;
             padding: 0;
         }
+        /* Joaco's code start */
+        .navbar-current {
+            color: white;
+            background-color: #1a1a2e;
+            padding: 8px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, color 0.3s;
+        }
+        /* Joaco's code end */
         .navbar {
             background-color: #251d3a;
             padding: 10px 20px;
@@ -23,7 +34,7 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-        .navbar a {
+        .navbar-item {
             color: #c084fc;
             /* Joaco's code start */
             padding: 8px;
@@ -34,7 +45,7 @@
             font-weight: bold;
             transition: transform 0.3s, color 0.3s;
         }
-        .navbar a:hover {
+        .navbar-item:hover {
             transform: scale(1.1);
             color: #ffffff;
         }
@@ -129,10 +140,10 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="https://nonixgames.com/">Home</a>
-        <a href="https://nonixgames.com/team">Team</a>
-        <a href="https://nonixgames.com/commissions">Commissions</a>
-        <a href="https://nonixgames.com/news">News</a>
+        <a class="navbar-item" href="https://nonixgames.com/">Home</a>
+        <a class="navbar-current">Team</a>
+        <a class="navbar-item" href="https://nonixgames.com/commissions">Commissions</a>
+        <a class="navbar-item" href="https://nonixgames.com/news">News</a>
     </nav>
     <header>
         <h1>Meet the Team.</h1>
