@@ -26,6 +26,11 @@
         }
         .navbar a {
             color: #c084fc;
+            /* Joaco's code start */
+            padding: 8px;
+            border-radius: 12px;
+            background-color: #322653;
+            /* Joaco's code end */
             text-decoration: none;
             font-weight: bold;
             transition: transform 0.3s, color 0.3s;
@@ -44,10 +49,16 @@
             border-radius: 10px;
             padding: 20px;
             text-align: center;
+            /* Joaco's code start */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Joaco's code end */
         }
         .sidebar h1 {
             color: #c084fc;
             font-size: 3em;
+            text-align: center;
             margin: 0;
         }
         .sidebar p {
@@ -69,67 +80,10 @@
             transition: transform 0.3s;
         }
 
-        .discord-widget .widget-theme-light ::-webkit-scrollbar-thumb {
-            background-color: #0055ff;
-        }
-
-        .discord-widget ::-webkit-scrollbar-thumb {
-            background-clip: inherit;
-            border-radius: 0;
-        }
-
-        .discord-widget ::-webkit-scrollbar-thumb:hover {
-            background: #0055ff;
-        }
-
-        .discord-widget .widget-header {
-            background-color: #Af1421;
-        }
-        .discord-widget .widget-footer {
-            background-color: #Af1421;
-            color: #fff;
-        }
-        .discord-widget .widget-body {
-            background-color: #Af1421;
-            color: #fff;
-        }
-        .discord-widget .widget-footer-info {
-            color: #fff;
-        }
-        .discord-widget .widget-member-avatar img {
-            border: 3px ridge #Af1421;
-            background-color: #Af1421;
-        }
-        .discord-widget .widget-member .widget-member-name {
-            background-color: #Af1421;
-        }   
-        .discord-widget .widget-role-name {
-            color: #fff;
-            background: #Af1421;
-            padding: 5px;
-            border-radius: 5px;
-        }
-        .discord-widget .widget-btn-connect {
-            color: #088488;
-            background-color: #d9d4cc;
-            border: 0;
-        }
-        .discord-widget .widget-btn-connect:hover {
-            color: #3a3a3a;
-            background-color: #d9d4cc;
-            border: 0;
-            opacity: 1;
-        }
-        .discord-widget .widget-body {
-            background-color: #00ffff;
-            box-shadow: none;
-        }
-
         .social-links a:hover img {
             transform: scale(1.1);
         }
         .content {
-            margin-top: 20px;
             background-color: #251d3a;
             border-radius: 10px;
             padding: 20px;
@@ -166,6 +120,146 @@
                 margin-left: 20px;
             }
         }
+
+        /* Joaco's code start */
+
+        .sidebar a {
+            color: #c084fc;
+            text-decoration: none;
+            font-size: large;
+        }
+
+        #widget {
+            width: 300px;
+            height: 500px;
+
+            border-radius: 12px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #c084fc;
+
+            background-color: #251d3a;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+
+            overflow-x: hidden;
+        }
+
+        #widget-name {
+            background: #662a9b;
+            background: linear-gradient(310deg, rgba(102, 42, 155, 1) 0%, rgba(237, 83, 222, 1) 100%);
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 10px;
+
+            width: 100%;
+            height: 80px;
+        }
+
+        #widget-name a {
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        #widget-preview {
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        #widget-preview::-webkit-scrollbar {
+            background-color: #ffffff00;
+        }
+
+        #widget-preview::-webkit-scrollbar-thumb {
+            background-color: #662a9bc4;
+            border-radius: 12px;
+        }
+
+        .preview-title {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .widget-channel {
+            border-radius: 12px;
+        }
+
+        .widget-channel:hover {
+            background-color: #662a9ba6;
+        }
+
+        .widget-channel a {
+            color: #c084fc;
+        }
+
+        .widget-member {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 12px;
+            margin: 4px 2px;
+        }
+
+        .widget-member:hover {
+            background-color: #662a9ba6;
+        }
+
+        .widget-member img {
+            width: 22px;
+            height: 22px;
+
+            border-radius: 50%;
+        }
+
+        .widget-member div {
+            visibility: hidden;
+        }
+
+        .widget-member a {
+            color: #c084fc;
+        }
+
+        #widget-invite {
+            background-color: #662a9b;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            width: 90%;
+            height: 60px;
+
+            margin: 20px 20px;
+
+            border-radius: 12px;
+
+            cursor: pointer;
+
+            transition: transform 0.3s, color 0.7s;
+        }
+
+        #widget-invite:hover {
+            transform: scale(1.05);
+            background-color: #c084fc;
+        }
+
+        #widget-invite h4 {
+            color: #e0e0e0;
+        }
+
+        /* Joaco's code end */
     </style>
 </head>
 <body>
@@ -177,20 +271,32 @@
     <div class="container">
         <aside class="sidebar">
             <h1>Nonix</h1>
-            <p>I'm Nonixgames, mostly known as Nonix. I'm a Chilean content creator on YouTube creating FNaF and GD content. I make FNaF renders as a hobby in my free time and I think I'm addicted to it. Pretty obvious that I'm a FNaF fan. I speak Spanish and English. <br>My email: nonix@nonixgames.com</p>
+            <p>I'm Nonixgames, mostly known as Nonix. I'm a Chilean content creator on YouTube creating FNaF and GD content. I make FNaF renders as a hobby in my free time and I think I'm addicted to it. Pretty obvious that I'm a FNaF fan. I speak Spanish and English. </p>
+            <a href="mailto:nonix@nonixgames.com">Contact me</a>
               <div class="social-links">
-                  <a href="https://www.x.com/Nonixgames"><img src="twt.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com/Nonixgames"><img src="insta.png" alt="Instagram"></a>
-                  <a href="https://www.youtube.com/nonixgames"><img src="yt.png" alt="YouTube"></a>
-                  <a href="https://bsky.app/profile/nonixgames.com"><img src="bsky.png" alt="Bluesky"></a>
-                  <a href="https://www.kick.com/nonixgames"><img src="kick.png" alt="Kick"></a>
-                  <a href="https://www.twitch.com/nonixgames"><img src="twch.png" alt="Twitch"></a>
+                  <a href="https://www.x.com/Nonixgames"><img src="https://nonixgames.com/twt.png" alt="Twitter"></a>
+                  <a href="https://www.instagram.com/Nonixgames"><img src="https://nonixgames.com/insta.png" alt="Instagram"></a>
+                  <a href="https://www.youtube.com/nonixgames"><img src="https://nonixgames.com/yt.png" alt="YouTube"></a>
+                  <a href="https://bsky.app/profile/nonixgames.com"><img src="https://nonixgames.com/bsky.png" alt="Bluesky"></a>
+                  <a href="https://www.kick.com/nonixgames"><img src="https://nonixgames.com/kick.png" alt="Kick"></a>
+                  <a href="https://www.twitch.com/nonixgames"><img src="https://nonixgames.com/twch.png" alt="Twitch"></a>
               </div>
-              <iframe src="https://discord.com/widget?id=770767062415048736&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" class="discord-widget"></iframe>
+              <!-- Joaco's code start -->
+              <div id="widget">
+                <div id="widget-name">
+                    <h2>Loading...</h2>
+                </div>
+                <div id="widget-preview"></div>
+                <div id="widget-invite">
+                    <h4>Join us for a bite!</h4>
+                </div>
+              </div>
+              <!-- Joaco's code end -->
         </aside>
         <main class="content">
             <h2>My Work</h2>
-            <div id="gallery"></div>
+            <div id="gallery">
+            </div>
         </main>
     </div>
     <script>
@@ -211,6 +317,32 @@
                 gallery.appendChild(element);
             }
         });
+
+        // Joaco's code start
+        async function widget() {
+            const widgetCall = await fetch("https://discord.com/api/guilds/770767062415048736/widget.json");
+            const widget = await widgetCall.json();
+
+            document.querySelector("#widget-name h2").innerText = widget["name"];
+
+            let preview = "<a class=\"preview-title\">Channels</a>";
+
+            for (let channel of widget["channels"].sort((a, b) => a.position - b.position))
+                preview += `<div class="widget-channel"><a>${channel["name"]}</a></div>`;
+
+            preview += "<br><a class=\"preview-title\">Members</a>";
+
+            for (let member of widget["members"].sort((a, b) => a.joined_at - b.joined_at))
+                preview += `<div class="widget-member"><div>a</div><img src="${member["avatar_url"]}"><div>a</div><a>${member["username"]}</a></div>`;
+
+            document.querySelector("#widget-preview").innerHTML = preview;
+
+            document.querySelector("#widget-invite").onclick = () => window.location.href = widget["instant_invite"];
+        }
+
+        widget();
+
+        // Joaco's code end
     </script>
 </body>
 </html>
