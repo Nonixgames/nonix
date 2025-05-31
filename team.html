@@ -15,6 +15,29 @@
             margin: 0;
             padding: 0;
         }
+        .navbar {
+            background-color: #251d3a;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .navbar a {
+            color: #c084fc;
+            /* Joaco's code start */
+            padding: 8px;
+            border-radius: 12px;
+            background-color: #322653;
+            /* Joaco's code end */
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .navbar a:hover {
+            transform: scale(1.1);
+            color: #ffffff;
+        }
         header {
             text-align: center;
             padding: 40px 20px 10px;
@@ -39,8 +62,7 @@
             background-color: #251d3a;
             border-radius: 15px;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
+            display: grid;
             align-items: center;
             gap: 15px;
         }
@@ -106,17 +128,22 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <a href="https://nonixgames.com/team">Team</a>
+        <a href="https://nonixgames.com/commissions">Commissions</a>
+        <a href="https://nonixgames.com/news">News</a>
+    </nav>
     <header>
         <h1>Meet the Team.</h1>
         <p>Here's a tiny presentation of each member of the team, take a look and meet them!</p>
     </header><div class="team-container">
     <div class="member-card">
         <div class="member-header">
-            <img src="cesarico.png" alt="Cesar" class="pfp">
+            <img src="https://nonixgames.com/cesarico.png" alt="Cesar" class="pfp">
             <div>
                 <div class="member-name">Cesargw121 (Cesar)</div>
                 <div class="member-social">
-                    <a href="https://x.com/gw121cesar" target="_blank"><img src="twt.png">Cesar Twitter</a>
+                    <a href="https://x.com/gw121cesar" target="_blank"><img src="https://nonixgames.com/twt.png">Cesar Twitter</a>
                 </div>
             </div>
         </div>
@@ -128,11 +155,11 @@
 
     <div class="member-card">
         <div class="member-header">
-            <img src="katzico.png" alt="Katzuna" class="pfp">
+            <img src="https://nonixgames.com/katzico.png" alt="Katzuna" class="pfp">
             <div>
                 <div class="member-name">Katzuna</div>
                 <div class="member-social">
-                    <a href="https://x.com/katzuna1002" target="_blank"><img src="twt.png">Katzuna Twitter</a>
+                    <a href="https://x.com/katzuna1002" target="_blank"><img src="https://nonixgames.com/twt.png">Katzuna Twitter</a>
                 </div>
             </div>
         </div>
@@ -145,11 +172,11 @@
 
     <div class="member-card">
         <div class="member-header">
-            <img src="drwnico.png" alt="Drwn" class="pfp">
+            <img src="https://nonixgames.com/drwnico.png" alt="Drwn" class="pfp">
             <div>
                 <div class="member-name">Darwin/Drwn</div>
                 <div class="member-social">
-                    <a href="https://x.com/Drwn0" target="_blank"><img src="twt.png">Darwin Twitter</a>
+                    <a href="https://x.com/Drwn0" target="_blank"><img src="https://nonixgames.com/twt.png">Darwin Twitter</a>
                 </div>
             </div>
         </div>
@@ -160,11 +187,11 @@
 
     <div class="member-card">
         <div class="member-header">
-            <img src="eliasico.png" alt="Elias" class="pfp">
+            <img src="https://nonixgames.com/eliasico.png" alt="Elias" class="pfp">
             <div>
                 <div class="member-name">Elias</div>
                 <div class="member-social">
-                    <a href="https://x.com/TransRightsBris" target="_blank"><img src="twt.png">Elias Twitter</a>
+                    <a href="https://x.com/TransRightsBris" target="_blank"><img src="https://nonixgames.com/twt.png">Elias Twitter</a>
                 </div>
             </div>
         </div>
@@ -172,11 +199,6 @@
             Hi I'm Elias, mod of Nonix. About me: I'm from Argentina, and I speak Spanish and English. I don't play many games bcs my trash PC and I'm so dumb I spent my money on gambling and an air fry whatever is spelled. Addict to Osu, travestis, Tboi and Geometry Dash porn. I like Mandarina, travestis, trans, furrys, sisters and I hate school.
         </div>
     </div>
-</div>
-
-<div class="nav-fixed">
-    <a href="https://nonixgames.com" title="Home"><img src="homebtn.png" alt="Home"></a>
-    <a href="https://nonixgames.com/discord" title="Discord"><img src="dsc.png" alt="Discord"></a>
 </div>
 
 </body>
