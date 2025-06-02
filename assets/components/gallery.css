@@ -11,10 +11,10 @@
     border-radius: 5px;
 }
 
-.gallery-item .landscape {
+.gallery-item.landscape {
     aspect-ratio: 16 / 9;
 }
 
-.gallery-item .portrait {
+.gallery-item.portrait {
     aspect-ratio: 9 / 16;
 }
