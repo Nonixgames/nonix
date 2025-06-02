@@ -132,27 +132,6 @@ body {
     padding: 20px;
 }
 
-#gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.gallery-item {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.gallery-item.landscape {
-    aspect-ratio: 16 / 9;
-}
-
-.gallery-item.portrait {
-    aspect-ratio: 9 / 16;
-}
-
 @media (max-width: 768px) {
     .container {
         flex-direction: column;

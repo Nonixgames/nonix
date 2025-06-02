@@ -1,4 +1,4 @@
-async function widget() {
+async function widgetComponent() {
     const widgetCall = await fetch(
         "https://discord.com/api/guilds/770767062415048736/widget.json",
     );
@@ -26,4 +26,4 @@ async function widget() {
         (window.location.href = widget["instant_invite"]);
 }
 
-document.addEventListener("DOMContentLoaded", widget);
+document.addEventListener("DOMContentLoaded", widgetComponent);

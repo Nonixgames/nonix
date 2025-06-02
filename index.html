@@ -21,10 +21,13 @@
             background-size: cover;
         }
     </style>
-    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/shared/style.css" />
     <!-- Add widget -->
-    <script src="assets/scripts/widget.js"></script>
-    <link rel="stylesheet" href="assets/styles/widget.css" />
+    <script src="assets/components/widget.js"></script>
+    <link rel="stylesheet" href="assets/components/widget.css" />
+    <!-- Add gallery -->
+    <script src="assets/components/gallery.js"></script>
+    <link rel="stylesheet" href="assets/components/gallery.css" />
 </head>
 <body>
     <nav class="navbar">
@@ -66,7 +69,6 @@
         </aside>
     </div>
     <script>
-        const gallery = document.getElementById("gallery");
         const mediaLinks = [
             { url: "https://pbs.twimg.com/media/Ghi7MDJXMAAcz7v?format=jpg&name=4096x4096", type: "landscape" },
             { url: "https://pbs.twimg.com/media/GhxafbkWkAAbSX1?format=jpg&name=4096x4096", type: "landscape" },
@@ -75,14 +77,8 @@
             { url: "https://pbs.twimg.com/media/GgEaNNDWAAAzDjn?format=jpg&name=4096x4096", type: "portrait" },
             { url: "https://pbs.twimg.com/media/GgLSGEUXEAAx6gD?format=jpg&name=4096x4096", type: "portrait" }
         ];
-        mediaLinks.forEach(media => {
-            if (media.url) {
-                const element = document.createElement("img");
-                element.src = media.url;
-                element.classList.add("gallery-item", media.type);
-                gallery.appendChild(element);
-            }
-        });
+
+        galleryAdd(mediaLinks);
     </script>
 </body>
 </html>
