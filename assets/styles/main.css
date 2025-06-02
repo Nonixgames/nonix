@@ -185,7 +185,7 @@ body {
     margin: auto;
 }
 .member-card {
-    background-color: #251d3a;
+    background-color: #251d3ace;
     border-radius: 15px;
     padding: 20px;
     display: grid;
@@ -235,4 +235,14 @@ body {
     .member-description {
         text-align: left;
     }
+}
+
+.version {
+    background-color: #662a9b;
+    /* Ik it's bad practice but does it really matter */
+    color: #ffffff !important;
+
+    margin-top: 8px;
+    padding: 0 4px;
+    border-radius: 12px;
 }

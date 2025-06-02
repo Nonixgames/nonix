@@ -1,4 +1,3 @@
-# nonix
+# Nonix's Website
 
-
-# sdafasdasdfasdfasdfasdfas
+This is the source for Nonix's website.
