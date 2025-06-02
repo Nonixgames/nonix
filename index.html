@@ -1,307 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nonix</title>
     <link rel="icon" type="image/x-icon" href="https://cdn.bsky.app/img/avatar/plain/did:plc:s57xduw7ql3gyxuazjaqhp2f/bafkreiefdpm3soazubwfidsy4oa4dqlrmqaatv2kxylybsobnbc3yaasxy@jpeg">
     <meta name="description" content="About Nonixgames (Nonix). News, teams and more here.">
     <meta name="keywords" content="nonixgames, nonix, Nonix, Nonixgames, NonixGD, Nonixgames , Nonix FNAF, Nonixgames YouTube">
     <meta property="og:image" content="https://yt3.googleusercontent.com/JdOxCyVJTH5Mtm6HeCTq8UquftEjbLCTanlm_UG0JLynafo08mKDyrxUp1TnCUxiA2puG5aV=s160-c-k-c0x00ffffff-no-rj">
-    <link rel="stylesheet" href="design.css">
-    <meta name="twitter:image" content="https://nonixgames.com/scpgpreview.png"> 
+    <meta name="twitter:image" content="https://nonixgames.com/scpgpreview.png">
     <meta name="twitter:description" content="About Nonix. Learn more from Nonix here.">
     <meta name="twitter:title" content="Nonix website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@nonixgames" />
     <meta name="author" content="Nonixgames">
-    <!--aa-->
-    <style>
-        body {
-            background-color: #1a1a2e;
-            color: #e0e0e0;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-        }
-        /* Joaco's code start */
-        .navbar-current {
-            color: white;
-            background-color: #1a1a2e;
-            padding: 8px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, color 0.3s;
-        }
-        /* Joaco's code end */
-        .navbar {
-            background-color: #251d3a;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .navbar-item {
-            color: #c084fc;
-            /* Joaco's code start */
-            padding: 8px;
-            border-radius: 12px;
-            background-color: #322653;
-            /* Joaco's code end */
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, color 0.3s;
-        }
-        .navbar-item:hover {
-            transform: scale(1.1);
-            color: #ffffff;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        .sidebar {
-            background-color: #322653;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            /* Joaco's code start */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* Joaco's code end */
-        }
-        .sidebar h1 {
-            color: #c084fc;
-            font-size: 3em;
-            text-align: center;
-            margin: 0;
-        }
-        .sidebar p {
-            margin-top: 10px;
-            line-height: 1.5;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        .social-links a img {
-            width: 40px;
-            height: 40px;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-
-        .social-links a:hover img {
-            transform: scale(1.1);
-        }
-        .content {
-            background-color: #251d3a;
-            border-radius: 10px;
-            padding: 20px;
-        }
-        #gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-        }
-        .gallery-item {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .gallery-item.landscape {
-            aspect-ratio: 16 / 9;
-        }
-        .gallery-item.portrait {
-            aspect-ratio: 9 / 16;
-        }
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-                max-width: 1200px;
-                margin: auto;
-            }
-            .sidebar {
-                width: 30%;
-                text-align: left;
-            }
-            .content {
-                width: 70%;
-                margin-left: 20px;
-            }
-        }
-
-        /* Joaco's code start */
-
-        .sidebar a {
-            color: #c084fc;
-            text-decoration: none;
-            font-size: large;
-        }
-
-        #widget {
-            width: 300px;
-            height: 500px;
-
-            border-radius: 12px;
-            border-style: solid;
-            border-width: 3px;
-            border-color: #c084fc;
-
-            background-color: #251d3a;
-
-            display: flex;
-            flex-direction: column;
-
-            align-items: center;
-
-            overflow-x: hidden;
-        }
-
-        #widget-name {
-            background: #662a9b;
-            background: linear-gradient(310deg, rgba(102, 42, 155, 1) 0%, rgba(237, 83, 222, 1) 100%);
-
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-
-            margin-bottom: 10px;
-
-            width: 100%;
-            height: 80px;
-        }
-
-        #widget-name a {
-            font-family: 'Arial', sans-serif;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        #widget-preview {
-            display: flex;
-            flex-direction: column;
-            width: 95%;
-            overflow-y: scroll;
-            overflow-x: hidden;
-        }
-
-        #widget-preview::-webkit-scrollbar {
-            background-color: #ffffff00;
-        }
-
-        #widget-preview::-webkit-scrollbar-thumb {
-            background-color: #662a9bc4;
-            border-radius: 12px;
-        }
-
-        .preview-title {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .widget-channel {
-            border-radius: 12px;
-        }
-
-        .widget-channel:hover {
-            background-color: #662a9ba6;
-        }
-
-        .widget-channel a {
-            color: #c084fc;
-        }
-
-        .widget-member {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border-radius: 12px;
-            margin: 4px 2px;
-        }
-
-        .widget-member:hover {
-            background-color: #662a9ba6;
-        }
-
-        .widget-member img {
-            width: 22px;
-            height: 22px;
-
-            border-radius: 50%;
-        }
-
-        .widget-member div {
-            visibility: hidden;
-        }
-
-        .widget-member a {
-            color: #c084fc;
-        }
-
-        #widget-invite {
-            background-color: #662a9b;
-
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-
-            width: 90%;
-            height: 60px;
-
-            margin: 20px 20px;
-
-            border-radius: 12px;
-
-            cursor: pointer;
-
-            transition: transform 0.3s, color 0.7s;
-        }
-
-        #widget-invite:hover {
-            transform: scale(1.05);
-            background-color: #c084fc;
-        }
-
-        #widget-invite h4 {
-            color: #e0e0e0;
-        }
-
-        /* Joaco's code end */
-    </style>
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <!-- Add widget -->
+    <script src="assets/scripts/widget.js"></script>
+    <link rel="stylesheet" href="assets/styles/widget.css" />
 </head>
 <body>
     <nav class="navbar">
         <a class="navbar-current">Home</a>
-        <a class="navbar-item" href="https://nonixgames.com/team">Team</a>
-        <a class="navbar-item" href="https://nonixgames.com/commissions">Commissions</a>
-        <a class="navbar-item" href="https://nonixgames.com/news">News</a>
+        <a class="navbar-item" href="team.html">Team</a>
+        <a class="navbar-item" href="commissions.html">Commissions</a>
+        <a class="navbar-item" href="news.html">News</a>
     </nav>
     <div class="container">
-        <aside class="sidebar">
-            <h1>Nonix</h1>
-            <p>I'm Nonixgames, mostly known as Nonix. I'm a Chilean content creator on YouTube creating FNaF and GD content. I make FNaF renders as a hobby in my free time and I think I'm addicted to it. Pretty obvious that I'm a FNaF fan. I speak Spanish and English. </p>
-            <a href="mailto:nonix@nonixgames.com">Contact me</a>
-              <div class="social-links">
-                  <a href="https://www.x.com/Nonixgames"><img src="https://nonixgames.com/twt.png" alt="Twitter"></a>
-                  <a href="https://www.instagram.com/Nonixgames"><img src="https://nonixgames.com/insta.png" alt="Instagram"></a>
-                  <a href="https://www.youtube.com/nonixgames"><img src="https://nonixgames.com/yt.png" alt="YouTube"></a>
-                  <a href="https://bsky.app/profile/nonixgames.com"><img src="https://nonixgames.com/bsky.png" alt="Bluesky"></a>
-                  <a href="https://www.kick.com/nonixgames"><img src="https://nonixgames.com/kick.png" alt="Kick"></a>
-                  <a href="https://www.twitch.com/nonixgames"><img src="https://nonixgames.com/twch.png" alt="Twitch"></a>
-              </div>
-              <!-- Joaco's code start -->
-              <div id="widget">
+    <main class="sidebar">
+        <h1>Nonix</h1>
+        <p>I'm Nonixgames, mostly known as Nonix. I'm a Chilean content creator on YouTube creating FNaF and GD content. I make FNaF renders as a hobby in my free time and I think I'm addicted to it. Pretty obvious that I'm a FNaF fan. I speak Spanish and English. </p>
+        <a href="mailto:nonix@nonixgames.com">Contact me</a>
+            <div class="social-links">
+              <a href="https://www.x.com/Nonixgames"><img src="assets/icons/twt.png" alt="Twitter"></a>
+              <a href="https://www.instagram.com/Nonixgames"><img src="assets/icons/insta.png" alt="Instagram"></a>
+              <a href="https://www.youtube.com/nonixgames"><img src="assets/icons/yt.png" alt="YouTube"></a>
+              <a href="https://bsky.app/profile/nonixgames.com"><img src="assets/icons/bsky.png" alt="Bluesky"></a>
+              <a href="https://www.kick.com/nonixgames"><img src="assets/icons/kick.png" alt="Kick"></a>
+              <a href="https://www.twitch.com/nonixgames"><img src="assets/icons/twch.png" alt="Twitch"></a>
+            </div>
+            <!-- Joaco's code start -->
+            <div id="widget">
                 <div id="widget-name">
                     <h2>Loading...</h2>
                 </div>
@@ -309,14 +48,14 @@
                 <div id="widget-invite">
                     <h4>Join us for a bite!</h4>
                 </div>
-              </div>
-              <!-- Joaco's code end -->
-        </aside>
-        <main class="content">
+            </div>
+            <!-- Joaco's code end -->
+        </main>
+        <aside class="content">
             <h1>My Work</h>
             <div id="gallery">
             </div>
-        </main>
+        </aside>
     </div>
     <script>
         const gallery = document.getElementById("gallery");
@@ -336,32 +75,6 @@
                 gallery.appendChild(element);
             }
         });
-
-        // Joaco's code start
-        async function widget() {
-            const widgetCall = await fetch("https://discord.com/api/guilds/770767062415048736/widget.json");
-            const widget = await widgetCall.json();
-
-            document.querySelector("#widget-name h2").innerText = widget["name"];
-
-            let preview = "<a class=\"preview-title\">Channels</a>";
-
-            for (let channel of widget["channels"].sort((a, b) => a.position - b.position))
-                preview += `<div class="widget-channel"><a>${channel["name"]}</a></div>`;
-
-            preview += "<br><a class=\"preview-title\">Members</a>";
-
-            for (let member of widget["members"].sort((a, b) => a.joined_at - b.joined_at))
-                preview += `<div class="widget-member"><div>a</div><img src="${member["avatar_url"]}"><div>a</div><a>${member["username"]}</a></div>`;
-
-            document.querySelector("#widget-preview").innerHTML = preview;
-
-            document.querySelector("#widget-invite").onclick = () => window.location.href = widget["instant_invite"];
-        }
-
-        widget();
-
-        // Joaco's code end
     </script>
 </body>
 </html>

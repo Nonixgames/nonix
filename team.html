@@ -1,217 +1,230 @@
-<!DOCTYPE html><html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meet the team that works together with the server, projects and Nonix!">
-    <meta name="keywords" content="nonix, nonixgames, cesar, cesargw121, katzuna1002, drwn, team, nonix friends">
-    <meta property="og:image" content="https://github.com/Nonixgames/nonix/blob/d4bbf1a23ee32557ed232bc508e58ed5d27b1218/teamdescimg.png">
-    <link rel="icon" href="teamicon.png">
-    <title>Meet the Team!</title>
-    <style>
-        body {
-            background-color: #1a1a2e;
-            color: #e0e0e0;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        /* Joaco's code start */
-        .navbar-current {
-            color: white;
-            background-color: #1a1a2e;
-            padding: 8px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, color 0.3s;
-        }
-        /* Joaco's code end */
-        .navbar {
-            background-color: #251d3a;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .navbar-item {
-            color: #c084fc;
-            /* Joaco's code start */
-            padding: 8px;
-            border-radius: 12px;
-            background-color: #322653;
-            /* Joaco's code end */
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, color 0.3s;
-        }
-        .navbar-item:hover {
-            transform: scale(1.1);
-            color: #ffffff;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px 10px;
-        }
-        header h1 {
-            font-size: 3em;
-            color: #c084fc;
-        }
-        header p {
-            font-size: 1.2em;
-            color: #cccccc;
-        }
-        .team-container {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            padding: 30px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        .member-card {
-            background-color: #251d3a;
-            border-radius: 15px;
-            padding: 20px;
-            display: grid;
-            align-items: center;
-            gap: 15px;
-        }
-        .member-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .member-header img.pfp {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .member-name {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #c084fc;
-        }
-        .member-social a {
-            color: #e0e0e0;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.95em;
-        }
-        .member-social img {
-            width: 20px;
-            height: 20px;
-        }
-        .member-description {
-            text-align: center;
-            line-height: 1.5;
-            font-size: 1em;
-            color: #d1d1d1;
-        }
-        .nav-fixed {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-        }
-        .nav-fixed a img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s;
-        }
-        .nav-fixed a img:hover {
-            transform: scale(1.1);
-        }
-        @media (min-width: 600px) {
-            .member-card {
-                flex-direction: row;
-                align-items: flex-start;
-                text-align: left;
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Meet the team that works together with the server, projects and Nonix!"
+        />
+        <meta
+            name="keywords"
+            content="nonix, nonixgames, cesar, cesargw121, katzuna1002, drwn, team, nonix friends"
+        />
+        <meta property="og:image" content="assets/team/teamdescimg.png" />
+        <link rel="icon" href="teamicon.png" />
+        <title>Meet the Team!</title>
+        <style>
+            header {
+                text-align: center;
+                padding: 40px 20px 10px;
             }
-            .member-description {
-                text-align: left;
+            header h1 {
+                font-size: 3em;
+                color: #c084fc;
             }
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <a class="navbar-item" href="https://nonixgames.com/">Home</a>
-        <a class="navbar-current">Team</a>
-        <a class="navbar-item" href="https://nonixgames.com/commissions">Commissions</a>
-        <a class="navbar-item" href="https://nonixgames.com/news">News</a>
-    </nav>
-    <header>
-        <h1>Meet the Team.</h1>
-        <p>Here's a tiny presentation of each member of the team, take a look and meet them!</p>
-    </header><div class="team-container">
-    <div class="member-card">
-        <div class="member-header">
-            <img src="https://nonixgames.com/cesarico.png" alt="Cesar" class="pfp">
-            <div>
-                <div class="member-name">Cesargw121 (Cesar)</div>
-                <div class="member-social">
-                    <a href="https://x.com/gw121cesar" target="_blank"><img src="https://nonixgames.com/twt.png">Cesar Twitter</a>
+            header p {
+                font-size: 1.2em;
+                color: #cccccc;
+            }
+        </style>
+        <link rel="stylesheet" href="assets/styles/main.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="navbar-item" href="index.html">Home</a>
+            <a class="navbar-current">Team</a>
+            <a class="navbar-item" href="commissions.html">Commissions</a>
+            <a class="navbar-item" href="news.html">News</a>
+        </nav>
+        <header>
+            <h1>Meet the Team.</h1>
+            <p>
+                Here's a tiny presentation of each member of the team, take a
+                look and meet them!
+            </p>
+        </header>
+        <div class="team-container">
+            <div class="member-card">
+                <div class="member-header">
+                    <img
+                        src="https://nonixgames.com/cesarico.png"
+                        alt="Cesar"
+                        class="pfp"
+                    />
+                    <div>
+                        <div class="member-name">Cesargw121 (Cesar)</div>
+                        <div class="member-social">
+                            <a href="https://x.com/gw121cesar" target="_blank"
+                                ><img
+                                    src="https://nonixgames.com/twt.png"
+                                />Cesar Twitter</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="member-description">
+                    Hi 👋, I'm César, Nonix's administrator and friend. I'm a
+                    bit reserved and don't usually talk much.<br />
+                    About me: I'm from Peru 🇵🇪. I personally don't play many
+                    games beyond Cities: Skylines, Phasmophobia, Euro Truck, and
+                    of course, playing with Nonix and the rest of the team. I
+                    like Chinese and Peruvian food, and Inca Kola.
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <img
+                        src="https://nonixgames.com/katzico.png"
+                        alt="Katzuna"
+                        class="pfp"
+                    />
+                    <div>
+                        <div class="member-name">Katzuna</div>
+                        <div class="member-social">
+                            <a href="https://x.com/katzuna1002" target="_blank"
+                                ><img
+                                    src="https://nonixgames.com/twt.png"
+                                />Katzuna Twitter</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="member-description">
+                    Hi, I'm Katzuna, one of the Administrators of the YouTube
+                    channel, one of the Owners of the Discord server, and a
+                    friend of Nonix.
+                    <br />
+                    <br />
+                    When it comes to moderation, I like when people follow the
+                    rules; if there are clear rules, I'll do everything possible
+                    to ensure everyone adheres to them strictly (although I try
+                    not to come across as too severe so that no one feels
+                    uncomfortable speaking in chat when I'm around).
+                    <br />
+                    <br />
+                    And about me: I'm from Chile, and I speak Spanish and
+                    English (although I prefer Spanish). I enjoy playing video
+                    games like Minecraft (especially doing stuff with commands
+                    and datapacks), Geometry Dash, Phasmophobia, Ultrakill, The
+                    Binding of Isaac, Celeste, Undertale/Deltarune, and, on rare
+                    occasions, Fortnite and PUBG (only with my friends, as I
+                    don't really like that kind of game). I also like subjects
+                    such as maths, chemistry, and physics, among others. I'm not
+                    really a fan of listening to music or watching series or
+                    movies. I consider myself a pretty boring and bad-tempered
+                    person, although I'm trying to change. I really don't like
+                    using my voice, so if you see me in a voice channel or
+                    something similar, don't expect me to speak. I prefer using
+                    a bot that reads what I write.
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <img
+                        src="https://nonixgames.com/drwnico.png"
+                        alt="Drwn"
+                        class="pfp"
+                    />
+                    <div>
+                        <div class="member-name">Darwin/Drwn</div>
+                        <div class="member-social">
+                            <a href="https://x.com/Drwn0" target="_blank"
+                                ><img
+                                    src="https://nonixgames.com/twt.png"
+                                />Darwin Twitter</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="member-description">
+                    Once upon a time, there was a man named Nodarwin. He saw a
+                    cartoon called "The Amazing World of Gumball." Since his
+                    favorite character is Darwin, he gave himself that username,
+                    and that's what they call him today. Most importantly, I
+                    like Pastel de papa.
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <img
+                        src="https://nonixgames.com/eliasico.png"
+                        alt="Elias"
+                        class="pfp"
+                    />
+                    <div>
+                        <div class="member-name">Elias</div>
+                        <div class="member-social">
+                            <a
+                                href="https://x.com/reviroconhuevo"
+                                target="_blank"
+                                ><img
+                                    src="https://nonixgames.com/twt.png"
+                                />Elias Twitter</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="member-description">
+                    Hi I'm Elias, mod of Nonix. About me: I'm from Argentina,
+                    and I speak Spanish and English. I don't play many games bcs
+                    my trash PC and I'm so dumb I spent my money on gambling and
+                    an air fry whatever is spelled. Addict to Osu, travestis,
+                    Tboi and Geometry Dash porn. I like Mandarina, travestis,
+                    trans, furrys, sisters and I hate school.
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="member-header">
+                    <img src="assets/team/joaco.jpeg" alt="Joaco" class="pfp" />
+                    <div>
+                        <div class="member-name">Joaco</div>
+                        <div class="member-social">
+                            <a href="https://jdelg.me/" target="_blank"
+                                ><img src="assets/icons/homebtn.png" />Joaco's
+                                Website</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="member-description">
+                    Hey there! I'm Joaco, I don't really have a role assigned
+                    here, but let's just say I'm Nonix's dev, and IRL friend.
+                    <br />
+                    <br />
+                    I'm from Chile 🇨🇱, so of course I speak Spanish, but I also
+                    speak English, a little bit of German and know some words in
+                    Latin.
+                    <br />
+                    <br />
+                    As far as programming goes, I love C, started with Java,
+                    hate weakly typed languages (too easy tbh) and really like
+                    long projects (they keep me entertained).
+                    <br />
+                    <br />
+                    For gaming I really enjoy games that are chill, shooters, or
+                    scary. A few of the games I play include Valorant, MC,
+                    R.E.P.O., Phasmophobia and Lethal Company.
+                    <br />
+                    <br />
+                    Some of my hobbies are: programming, listening to music,
+                    gaming, watching shows, and designing circuits.
+                    <br />
+                    <br />
+                    And some of my favourite conversation themes are: math
+                    (mostly algebra and trig), physics, anything related to
+                    politics, data science (anything related to science tbh),
+                    and games.
+                    <br />
+                    <br />
+                    If you'd like to talk then hit me up with a message! I'll be
+                    happy to respond.
                 </div>
             </div>
         </div>
-        <div class="member-description">
-            Hi 👋, I'm César, Nonix's administrator and friend. I'm a bit reserved and don't usually talk much.<br>
-            About me: I'm from Peru 🇵🇪. I personally don't play many games beyond Cities: Skylines, Phasmophobia, Euro Truck, and of course, playing with Nonix and the rest of the team. I like Chinese and Peruvian food, and Inca Kola.
-        </div>
-    </div>
-
-    <div class="member-card">
-        <div class="member-header">
-            <img src="https://nonixgames.com/katzico.png" alt="Katzuna" class="pfp">
-            <div>
-                <div class="member-name">Katzuna</div>
-                <div class="member-social">
-                    <a href="https://x.com/katzuna1002" target="_blank"><img src="https://nonixgames.com/twt.png">Katzuna Twitter</a>
-                </div>
-            </div>
-        </div>
-        <div class="member-description">
-            Hi, I'm Katzuna, one of the Administrators of the YouTube channel, one of the Owners of the Discord server, and a friend of Nonix.<br><br>
-            When it comes to moderation, I like when people follow the rules; if there are clear rules, I'll do everything possible to ensure everyone adheres to them strictly (although I try not to come across as too severe so that no one feels uncomfortable speaking in chat when I'm around).<br><br>
-            And about me: I'm from Chile, and I speak Spanish and English (although I prefer Spanish). I enjoy playing video games like Minecraft (especially doing stuff with commands and datapacks), Geometry Dash, Phasmophobia, Ultrakill, The Binding of Isaac, Celeste, Undertale/Deltarune, and, on rare occasions, Fortnite and PUBG (only with my friends, as I don't really like that kind of game). I also like subjects such as maths, chemistry, and physics, among others. I'm not really a fan of listening to music or watching series or movies. I consider myself a pretty boring and bad-tempered person, although I'm trying to change. I really don't like using my voice, so if you see me in a voice channel or something similar, don't expect me to speak. I prefer using a bot that reads what I write.
-        </div>
-    </div>
-
-    <div class="member-card">
-        <div class="member-header">
-            <img src="https://nonixgames.com/drwnico.png" alt="Drwn" class="pfp">
-            <div>
-                <div class="member-name">Darwin/Drwn</div>
-                <div class="member-social">
-                    <a href="https://x.com/Drwn0" target="_blank"><img src="https://nonixgames.com/twt.png">Darwin Twitter</a>
-                </div>
-            </div>
-        </div>
-        <div class="member-description">
-            Once upon a time, there was a man named Nodarwin. He saw a cartoon called "The Amazing World of Gumball." Since his favorite character is Darwin, he gave himself that username, and that's what they call him today. Most importantly, I like Pastel de papa.
-        </div>
-    </div>
-
-    <div class="member-card">
-        <div class="member-header">
-            <img src="https://nonixgames.com/eliasico.png" alt="Elias" class="pfp">
-            <div>
-                <div class="member-name">Elias</div>
-                <div class="member-social">
-                    <a href="https://x.com/TransRightsBris" target="_blank"><img src="https://nonixgames.com/twt.png">Elias Twitter</a>
-                </div>
-            </div>
-        </div>
-        <div class="member-description">
-            Hi I'm Elias, mod of Nonix. About me: I'm from Argentina, and I speak Spanish and English. I don't play many games bcs my trash PC and I'm so dumb I spent my money on gambling and an air fry whatever is spelled. Addict to Osu, travestis, Tboi and Geometry Dash porn. I like Mandarina, travestis, trans, furrys, sisters and I hate school.
-        </div>
-    </div>
-</div>
-
-</body>
+    </body>
 </html>
