@@ -3,63 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <title>Countdown Timer</title>
+  <link href="https://fonts.googleapis.com/css2?family=DejaVu+Sans&display=swap" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
       padding: 0;
       background: transparent;
-      font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif;
-      overflow: hidden;
-      height: 100%;
-      width: 100%;
+      font-family: 'DejaVu Sans', sans-serif;
+      color: white;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                   -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
-    #timer {
+    #configPanel {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 140px;
-      font-weight: bold;
-      color: white;
-      white-space: nowrap;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 8px;
+    }
 
-      /* Clean, bold black outline */
-      text-shadow:
-        -3px -3px 0 black,
-         3px -3px 0 black,
-        -3px  3px 0 black,
-         3px  3px 0 black,
-         0px  0px 8px black; /* soft glow for smoothness */
+    #countdownDisplay {
+      font-size: 48px;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    label, select, input {
+      display: block;
+      margin: 5px 0;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <div id="timer">Loading...</div>
 
-  <script>
-    // Target date: July 27, 2025 at 13:00 CDT (UTC-5)
-    const targetDate = new Date(Date.UTC(2025, 6, 27, 18, 0, 0)); // UTC equivalent
+<div id="configPanel">
+  <label>
+    Mode:
+    <select id="modeSelect">
+      <option value="date">Date</option>
+      <option value="time">Time</option>
+    </select>
+  </label>
 
-    function updateTimer() {
-      const now = new Date();
-      const diff = targetDate - now;
+  <div id="dateInputs">
+    <label>Date: <input type="date" id="dateInput"></label>
+    <label>Time: <input type="time" id="timeInput"></label>
+    <label>Timezone:
+      <select id="timezoneSelect">
+        <option value="UTC">UTC</option>
+        <option value="America/Santiago">America/Santiago</option>
+        <option value="America/New_York">America/New_York</option>
+        <option value="Europe/London">Europe/London</option>
+        <option value="Asia/Tokyo">Asia/Tokyo</option>
+        <!-- Add more if needed -->
+      </select>
+    </label>
+  </div>
 
-      if (diff <= 0) {
-        document.getElementById("timer").textContent = "00:00:00";
+  <div id="timeInputs" style="display:none;">
+    <label>Hours: <input type="number" id="hoursInput" min="0" value="0"></label>
+    <label>Minutes: <input type="number" id="minutesInput" min="0" value="0"></label>
+  </div>
+
+  <button onclick="startCountdown()">Start Countdown</button>
+</div>
+
+<div id="countdownDisplay">00:00:00</div>
+
+<script>
+  const modeSelect = document.getElementById('modeSelect');
+  const dateInputs = document.getElementById('dateInputs');
+  const timeInputs = document.getElementById('timeInputs');
+  const countdownDisplay = document.getElementById('countdownDisplay');
+
+  let countdownInterval;
+
+  modeSelect.addEventListener('change', () => {
+    if (modeSelect.value === 'date') {
+      dateInputs.style.display = 'block';
+      timeInputs.style.display = 'none';
+    } else {
+      dateInputs.style.display = 'none';
+      timeInputs.style.display = 'block';
+    }
+  });
+
+  function startCountdown() {
+    clearInterval(countdownInterval);
+    let endTime;
+
+    if (modeSelect.value === 'date') {
+      const date = document.getElementById('dateInput').value;
+      const time = document.getElementById('timeInput').value;
+      const timezone = document.getElementById('timezoneSelect').value;
+
+      if (!date || !time) {
+        alert("Please select both date and time.");
         return;
       }
 
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById("timer").textContent =
-        `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      const dateTimeStr = `${date}T${time}:00`;
+      const localDate = new Date(dateTimeStr);
+      const utcDate = new Date(localDate.toLocaleString("en-US", { timeZone: timezone }));
+      endTime = utcDate.getTime();
+    } else {
+      const hours = parseInt(document.getElementById('hoursInput').value) || 0;
+      const minutes = parseInt(document.getElementById('minutesInput').value) || 0;
+      const now = Date.now();
+      endTime = now + ((hours * 60 + minutes) * 60 * 1000);
     }
 
-    setInterval(updateTimer, 1000);
-    updateTimer();
-  </script>
+    countdownInterval = setInterval(() => {
+      const now = Date.now();
+      let diff = endTime - now;
+
+      if (diff <= 0) {
+        countdownDisplay.textContent = "00:00:00";
+        clearInterval(countdownInterval);
+        return;
+      }
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      let display = '';
+      if (days > 0) {
+        display += `${days}d `;
+      }
+      display += `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      countdownDisplay.textContent = display;
+    }, 1000);
+  }
+</script>
+
 </body>
 </html>
