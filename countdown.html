@@ -8,7 +8,7 @@
       margin: 0;
       padding: 0;
       background: transparent;
-      font-family: 'DejaVu Sans', sans-serif;
+      font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif;
       overflow: hidden;
       height: 100%;
       width: 100%;
@@ -19,16 +19,18 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 120px;
+      font-size: 140px;
       font-weight: bold;
       color: white;
-      text-shadow:
-        0 0 4px black,
-        -2px -2px 0 black,
-         2px -2px 0 black,
-        -2px  2px 0 black,
-         2px  2px 0 black;
       white-space: nowrap;
+
+      /* Clean, bold black outline */
+      text-shadow:
+        -3px -3px 0 black,
+         3px -3px 0 black,
+        -3px  3px 0 black,
+         3px  3px 0 black,
+         0px  0px 8px black; /* soft glow for smoothness */
     }
   </style>
 </head>
